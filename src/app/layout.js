@@ -2,7 +2,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Toaster } from 'react-hot-toast';
 import Navbar from "@/components/layout/Navbar";
-import { AuthProvider } from "@/context/AuthContext";
+
 import Footer from "@/components/layout/Footer";
 
 // Google Fonts Setup
@@ -28,14 +28,14 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${inter.variable} ${playfair.variable} select-none`}>
       <body className="antialiased bg-gray-50">
         {/* Navbar hum agle step me banayenge */}
-        <AuthProvider>
-        <main className="min-h-screen">
+        
+        <main className="">
           <Navbar />
           {children}
           <Footer />
         </main>
         <Toaster position="bottom-center" />
-        </AuthProvider>
+        
       </body>
     </html>
   );

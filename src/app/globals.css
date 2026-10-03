@@ -1,50 +1,69 @@
 @import "tailwindcss";
 
 @theme {
-  /* --- NEW PALETTE (From Image) --- */
+  /* --- BRAND PALETTE (Pink / Rose) --- */
+  /* (Isko waise hi rakha hai agar future me kahin zaroorat pade, par design se hata diya hai) */
   --color-brand-50: #fce4ec;
   --color-brand-100: #f8bbd0;
   --color-brand-200: #f48fb1;
   --color-brand-300: #f06292;
   --color-brand-400: #ec407a;
-  
-  /* Synthetic Darker Shade for Hover (Since image stopped at 400) */
   --color-brand-500: #d81b60; 
 
-  /* --- SEMANTIC NAMES --- */
-  --color-primary: var(--color-brand-400);
-  --color-primary-hover: var(--color-brand-500);
-  --color-bg-soft: var(--color-brand-50);
+  /* --- NEW ACCENT PALETTE (Gold / Champagne) --- */
+  --color-accent-100: #fcf8f2;
+  --color-accent-300: #eaddc5;
+  --color-accent-500: #d4af37; /* Premium Gold */
   
-  --color-text-main: #1a1a1a;
-  --color-text-muted: #64748b;
+  /* --- NEW NEUTRAL PALETTE (Editorial Look) --- */
+  --color-ivory: #F5F0E8;
+  --color-charcoal: #292722;
+  --color-beige: #D9C7B5;
+  --color-brown-muted: #A77D64;
+
+  /* --- SEMANTIC NAMES --- */
+  --color-primary: var(--color-accent-500);
+  --color-primary-hover: var(--color-charcoal);
+  --color-secondary: var(--color-accent-500);
+  
+  /* Backgrounds */
+  --color-bg-main: var(--color-ivory); /* Soft warm white background */
+  --color-bg-soft: var(--color-accent-100); /* PINK HATA DIYA: Ab yeh champagne/gold ka light shade hai */
+  --color-bg-card: #ffffff;
+  
+  /* Text */
+  --color-text-main: var(--color-charcoal);
+  --color-text-muted: var(--color-brown-muted);
 
   /* --- FONTS --- */
   --font-serif: var(--font-playfair);
   --font-sans: var(--font-inter);
 
-  /* --- SHADOWS (Soft Pink Glow) --- */
-  --shadow-glow: 0 10px 40px -10px rgba(236, 64, 122, 0.3);
+  /* --- SHADOWS --- */
+  /* Glow shadow ko bhi pink se change karke soft gold kar diya */
+  --shadow-glow: 0 10px 40px -10px rgba(212, 175, 55, 0.2); 
+  --shadow-elegant: 0 15px 35px -5px rgba(41, 39, 34, 0.05);
 }
 
 /* --- BASE STYLES --- */
 body {
-  background-color: #ffffff;
+  background-color: var(--color-bg-main);
   color: var(--color-text-main);
-  antialiased: true;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Modern Scrollbar */
+/* Modern Scrollbar - Scrollbar se bhi pink hata kar Ivory/Gold theme laga di */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-brand-50);
+  background: var(--color-ivory);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-brand-200);
+  background: var(--color-accent-300);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-brand-300);
+  background: var(--color-accent-500);
 }
