@@ -32,7 +32,7 @@ export default function AboutUs() {
     {
       name: "Gaud Manish",
       role: "Founder & Creative Director",
-      image: "/team/manish.png",
+      image: "/team/manish1.png",
       bio: "A visionary with a passion for crafting luxurious, timeless wedding experiences that feel authentic and elegant."
     },
     {
